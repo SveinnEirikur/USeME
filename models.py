@@ -97,13 +97,11 @@ class S2Filters(LightningModule):
 
     def forward(self, x_t):
         '''
-        inputs: (torch.(cuda.)Tensor) Model inputs: tensor of input image B x C x H x W and
-        tensor of PSFs B x C x Hk x Wk
+        inputs: (torch.(cuda.)Tensor) Model inputs: tensor of input image 
+        B x C x H x W
 
-        (self.) alpha: (torch.(cuda.)Tensor) Power of a trade-off coefficient exp(alpha) 1 x 1
-        (self.) g_ker: (torch.(cuda.)Tensor) Group of identical learnable regularization kernels D x 1 x Hg x Wg
 
-        returns: (torch.(cuda.)Tensor) Output of the Wiener-Kolmogorov filter with learnable
+        returns: (torch.(cuda.)Tensor) Output of the filter with learnable
         regularization kernels B x C x H x W
         '''
 
@@ -272,8 +270,6 @@ class SteepestDescentZS(LightningModule):
     def forward(self, y, fft_of_B=None, alpha=None, beta=None):
         """
         y: (torch.(cuda.)Tensor) Tensor of input images of shape B x C x H x W
-        ker: (torch.(cuda.)Tensor) Tensor of PSFs of shape B x C x Hk x Wk
-        n_iter: (int) Number of gradient descent iterations
         returns: (torch.(cuda.)Tensor) Output of the gradient descent scheme B x C x H x W
         """
         
