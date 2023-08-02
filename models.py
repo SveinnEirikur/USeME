@@ -199,8 +199,7 @@ class SimpleMultiBandRegularized(LightningModule):
 
 class SteepestDescentZS(LightningModule):
     """
-    Module that uses UNet to predict individual gradient of a regularizer for each input image and then
-    applies gradient descent scheme with predicted gradient of a regularizers per-image
+    Module that applies gradient descent scheme with predicted filters as a regularizers per-channel
     """
     def __init__(
             self,
