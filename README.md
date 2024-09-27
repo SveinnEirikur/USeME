@@ -3,7 +3,7 @@
 ## Repository to accompany "Superresolving Sentinel-2 Using Learned Multispectral Regularization"
 ### Presented at IGARSS 2023
 
-This repository contains the code used in the paper ["Superresolving Sentinel-2 Using Learned Multispectral Regularization."](https://ieeexplore.ieee.org/search/searchresult.jsp?newsearch=true&queryText=Armannsson "Correct link here once available...")
+This repository contains the code used in the paper ["Superresolving Sentinel-2 Using Learned Multispectral Regularization."](https://ieeexplore.ieee.org/document/10281544)
 
 The method is set up to load data from `.mat` files, custom data loading can be added to `mat_loaders.py`.
 
